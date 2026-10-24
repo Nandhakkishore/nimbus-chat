@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Nimbus Chat",
+    "slug": "nimbus-chat",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0c1317"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0c1317"
+      },
+      "softwareKeyboardLayoutMode": "resize"
+    }
+  }
+}

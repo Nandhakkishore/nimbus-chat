@@ -1,0 +1,334 @@
+/* HumanLink - Color Themes System */
+
+:root {
+  /* Default Emerald WhatsApp Theme */
+  --bg-app: #0c1317;
+  --bg-sidebar: #111b21;
+  --bg-chat: #0b141a;
+  --bg-header: #202c33;
+  --bg-input: #2a3942;
+  --bg-hover: #202c33;
+  --bg-active: #2a3942;
+  
+  --bubble-received: #202c33;
+  --bubble-sent: #005c4b;
+  --bubble-sent-hover: #026956;
+  
+  --accent-whatsapp: #00a884;
+  --accent-whatsapp-hover: #008f70;
+  --accent-teal: #128c7e;
+  --accent-blue: #53bdeb;
+  --accent-rose: #ea868f;
+  --accent-amber: #ffbc38;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', var(--font-sans);
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Text Colors */
+  --text-primary: #e9edef;
+  --text-secondary: #8696a0;
+  --text-muted: #667781;
+  --text-inverse: #111b21;
+
+  /* Borders & Dividers */
+  --border-color: rgba(134, 150, 160, 0.15);
+  --border-focus: #00a884;
+  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+
+  /* Radius & Shadows */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 1px 2px rgba(11, 20, 26, 0.5);
+  --shadow-md: 0 4px 12px rgba(11, 20, 26, 0.7);
+  
+  --transition-fast: 0.12s ease-in-out;
+}
+
+/* 1. Cyberpunk Violet Theme */
+[data-color-theme="violet"] {
+  --bg-app: #08040d;
+  --bg-sidebar: #0f0817;
+  --bg-chat: #07030a;
+  --bg-header: #1b0e2b;
+  --bg-input: #291442;
+  --bg-hover: #1b0e2b;
+  --bg-active: #291442;
+
+  --bubble-received: #1b0e2b;
+  --bubble-sent: #5f27cd;
+  --accent-whatsapp: #a55eea;
+  --accent-whatsapp-hover: #8854d0;
+  --border-color: rgba(165, 94, 234, 0.2);
+}
+
+/* 2. Sapphire Deep Blue Theme */
+[data-color-theme="sapphire"] {
+  --bg-app: #060e1a;
+  --bg-sidebar: #0a172a;
+  --bg-chat: #040a14;
+  --bg-header: #122540;
+  --bg-input: #1a365d;
+  --bg-hover: #122540;
+  --bg-active: #1a365d;
+
+  --bubble-received: #122540;
+  --bubble-sent: #1b4965;
+  --accent-whatsapp: #38ef7d;
+  --accent-whatsapp-hover: #11998e;
+  --border-color: rgba(56, 239, 125, 0.2);
+}
+
+/* 3. Sunset Amber Gold Theme */
+[data-color-theme="amber"] {
+  --bg-app: #120b02;
+  --bg-sidebar: #1c1103;
+  --bg-chat: #0e0801;
+  --bg-header: #2e1c05;
+  --bg-input: #422908;
+  --bg-hover: #2e1c05;
+  --bg-active: #422908;
+
+  --bubble-received: #2e1c05;
+  --bubble-sent: #b45309;
+  --accent-whatsapp: #f59e0b;
+  --accent-whatsapp-hover: #d97706;
+  --border-color: rgba(245, 158, 11, 0.2);
+}
+
+/* 4. Ruby Rose Red Theme */
+[data-color-theme="rose"] {
+  --bg-app: #120407;
+  --bg-sidebar: #1c060b;
+  --bg-chat: #0d0205;
+  --bg-header: #2e0a12;
+  --bg-input: #45101b;
+  --bg-hover: #2e0a12;
+  --bg-active: #45101b;
+
+  --bubble-received: #2e0a12;
+  --bubble-sent: #be123c;
+  --accent-whatsapp: #f43f5e;
+  --accent-whatsapp-hover: #e11d48;
+  --border-color: rgba(244, 63, 94, 0.2);
+}
+
+/* 5. Crisp Light Theme */
+[data-color-theme="light"] {
+  --bg-app: #eae6df;
+  --bg-sidebar: #ffffff;
+  --bg-chat: #efeae2;
+  --bg-header: #f0f2f5;
+  --bg-input: #ffffff;
+  --bg-hover: #f5f6f6;
+  --bg-active: #e9edef;
+
+  --bubble-received: #ffffff;
+  --bubble-sent: #d9fdd3;
+  --bubble-sent-hover: #c4f7bc;
+
+  --text-primary: #111b21;
+  --text-secondary: #667781;
+  --text-muted: #8696a0;
+  
+  --border-color: rgba(11, 20, 26, 0.08);
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  user-select: none;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(134, 150, 160, 0.25);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(134, 150, 160, 0.45);
+}
+
+/* WhatsApp Pattern Overlay */
+.chat-wallpaper {
+  background-color: var(--bg-chat);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Speech Bubbles */
+.bubble-received {
+  background: var(--bubble-received);
+  color: var(--text-primary);
+  border-radius: 0px 12px 12px 12px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.bubble-sent {
+  background: var(--bubble-sent);
+  color: var(--text-primary);
+  border-radius: 12px 0px 12px 12px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+/* Date Pill */
+.date-pill {
+  background: var(--bg-header);
+  color: var(--text-secondary);
+  font-size: 0.725rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge-trust-high {
+  background: rgba(0, 168, 132, 0.15);
+  border: 1px solid rgba(0, 168, 132, 0.4);
+  color: var(--accent-whatsapp);
+}
+
+.badge-scam-high {
+  background: rgba(244, 63, 94, 0.15);
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  color: #f43f5e;
+}
+
+/* Mobile Bottom Navigation Bar Responsiveness */
+.mobile-bottom-bar {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .mobile-bottom-bar {
+    display: flex !important;
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .inbox-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-right: none !important;
+  }
+  .chat-wallpaper {
+    width: 100% !important;
+    padding-bottom: 60px;
+  }
+}
+
+/* Glass Panel & Video Calling UI */
+.glass-panel {
+  background: rgba(17, 27, 33, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.pulse-dot {
+  animation: pulseDot 1.6s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  50% { transform: scale(1.3); opacity: 1; filter: drop-shadow(0 0 6px currentColor); }
+  100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+video {
+  background-color: #060a12;
+}
+
+/* Highlight Flash when navigating to quoted message */
+.highlight-message {
+  animation: highlightGlow 1.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes highlightGlow {
+  0% {
+    background-color: rgba(0, 168, 132, 0.35);
+    border-radius: 12px;
+    box-shadow: 0 0 16px rgba(0, 168, 132, 0.5);
+  }
+  70% {
+    background-color: rgba(0, 168, 132, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 168, 132, 0.25);
+  }
+  100% {
+    background-color: transparent;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+}
+
+/* Floating Reaction & Emoji Buttons */
+.reaction-emoji-btn:hover {
+  transform: scale(1.3) translateY(-2px);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}

@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+mobile/node_modules/
+server/node_modules/
+*/node_modules/
+
+# Production builds
+dist/
+build/
+web-build/
+
+# Local Environment Variables
+.env
+.env.local
+.env.*.local
+*.local
+mobile/.env.local
+
+# Expo & React Native
+.expo/
+mobile/.expo/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Editor & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Scratch and temporary folders
+scratch/
